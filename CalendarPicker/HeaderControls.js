@@ -1,13 +1,8 @@
-import React from 'react';
-import {
-  View,
-  Text,
-  Platform,
-  TouchableOpacity
-} from 'react-native';
-import PropTypes from 'prop-types';
-import { Utils } from './Utils';
-import Controls from './Controls';
+import React from "react";
+import { View, Text, Platform, TouchableOpacity } from "react-native";
+import PropTypes from "prop-types";
+import { Utils } from "./Utils";
+import Controls from "./Controls";
 
 export default function HeaderControls(props) {
   const {
@@ -33,18 +28,22 @@ export default function HeaderControls(props) {
     minDate,
     headingLevel,
     monthYearHeaderWrapperStyle,
-    headerWrapperStyle
+    headerWrapperStyle,
   } = props;
   const MONTHS = months || Utils.MONTHS; // English Month Array
   const monthName = MONTHS[currentMonth];
   const year = currentYear;
 
-  const disablePreviousMonth = restrictMonthNavigation && Utils.isSameMonthAndYear(minDate, currentMonth, currentYear);
-  const disableNextMonth = restrictMonthNavigation && Utils.isSameMonthAndYear(maxDate, currentMonth, currentYear);
+  const disablePreviousMonth =
+    restrictMonthNavigation &&
+    Utils.isSameMonthAndYear(minDate, currentMonth, currentYear);
+  const disableNextMonth =
+    restrictMonthNavigation &&
+    Utils.isSameMonthAndYear(maxDate, currentMonth, currentYear);
 
-  const accessibilityProps = { accessibilityRole: 'header' };
-  if (Platform.OS === 'web') {
-    accessibilityProps['aria-level'] = headingLevel;
+  const accessibilityProps = { accessibilityRole: "header" };
+  if (Platform.OS === "web") {
+    accessibilityProps["aria-level"] = headingLevel;
   }
 
   return (
@@ -57,17 +56,22 @@ export default function HeaderControls(props) {
         styles={styles.previousContainer}
         textStyles={[styles.navButtonText, textStyle, previousTitleStyle]}
       />
-      <View style={[styles.monthYearHeaderWrapper,monthYearHeaderWrapperStyle]}>
+      <View
+        style={[styles.monthYearHeaderWrapper, monthYearHeaderWrapperStyle]}
+      >
         <TouchableOpacity onPress={onPressMonth}>
-          <Text style={[styles.monthHeaderMainText, textStyle, monthTitleStyle]} {...accessibilityProps}>
-            { monthName }
+          <Text
+            style={[styles.monthHeaderMainText, textStyle, monthTitleStyle]}
+            {...accessibilityProps}
+          >
+            {monthName}
           </Text>
         </TouchableOpacity>
-        <TouchableOpacity onPress={onPressYear}>
+        {/* <TouchableOpacity onPress={onPressYear}>
           <Text style={[styles.yearHeaderMainText, textStyle, yearTitleStyle]}>
             { year }
           </Text>
-        </TouchableOpacity>
+        </TouchableOpacity> */}
       </View>
       <Controls
         disabled={disableNextMonth}
