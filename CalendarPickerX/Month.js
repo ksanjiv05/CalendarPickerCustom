@@ -6,7 +6,6 @@ import {
 } from 'react-native';
 import PropTypes from 'prop-types';
 import { Utils } from './Utils';
-import moment from 'moment';
 
 export default function Month(props) {
   const {
@@ -55,14 +54,13 @@ export default function Month(props) {
     <View style={[styles.monthContainer]}>
       { !monthOutOfRange ?
         <TouchableOpacity
-        
           onPress={onSelect}>
-          <Text style={[styles.monthText, textStyle,{...month==moment().get("month")?{ backgroundColor:"green",paddingHorizontal:25,paddingVertical:8,borderRadius:8,color:"#fff"}:{paddingHorizontal:25,paddingVertical:8}}]}>
+          <Text style={[styles.monthText, textStyle]}>
             { monthName }
           </Text>
         </TouchableOpacity>
         :
-        <Text style={[textStyle, styles.disabledText,{paddingHorizontal:25,paddingVertical:8}]}>
+        <Text style={[textStyle, styles.disabledText]}>
           { monthName }
         </Text>
       }

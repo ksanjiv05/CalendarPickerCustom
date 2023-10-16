@@ -30,7 +30,7 @@ export default function HeaderControls(props) {
     monthYearHeaderWrapperStyle,
     headerWrapperStyle,
   } = props;
-  const MONTHS =  Utils.MONTHS; // English Month Array
+  const MONTHS = months || Utils.MONTHS; // English Month Array
   const monthName = MONTHS[currentMonth];
   const year = currentYear;
 

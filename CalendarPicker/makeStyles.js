@@ -43,6 +43,7 @@ export function makeStyles(params) {
     dayButton: {
       width: 30*scaler,
       height: 30*scaler,
+      // backgroundColor:"red",
       borderRadius: getBorderRadiusByShape(scaler, dayShape),
       alignSelf: 'center',
       justifyContent: 'center'
@@ -56,6 +57,7 @@ export function makeStyles(params) {
 
     selectedDayLabel: {
       color: SELECTED_TEXT_COLOR,
+      
     },
 
     dayLabelsWrapper: {
@@ -72,7 +74,8 @@ export function makeStyles(params) {
 
     daysWrapper: {
       alignSelf: 'center',
-      justifyContent: 'center'
+      justifyContent: 'center',
+      
     },
 
     dayLabels: {
@@ -85,6 +88,7 @@ export function makeStyles(params) {
     selectedDay: {
       width: 30*scaler,
       height:30*scaler,
+      
       borderRadius: getBorderRadiusByShape(scaler, dayShape),
       alignSelf: 'center',
       justifyContent: 'center'
@@ -92,6 +96,7 @@ export function makeStyles(params) {
 
     selectedDayBackground: {
       backgroundColor: SELECTED_BG_COLOR,
+      
     },
 
     selectedToday: {
@@ -113,7 +118,7 @@ export function makeStyles(params) {
 
     startDayWrapper: {
       width: 50*scaler,
-      height: 30*scaler,
+      height: 40*scaler,
       borderTopLeftRadius: 20*scaler,
       borderBottomLeftRadius: 20*scaler,
       backgroundColor: SELECTED_BG_COLOR,
@@ -123,7 +128,7 @@ export function makeStyles(params) {
 
     endDayWrapper: {
       width: 50*scaler,
-      height: 30*scaler,
+      height: 40*scaler,
       borderTopRightRadius: 20*scaler,
       borderBottomRightRadius: 20*scaler,
       backgroundColor: SELECTED_BG_COLOR,
@@ -133,7 +138,7 @@ export function makeStyles(params) {
 
     inRangeDay: {
       width: 50*scaler,
-      height: 30*scaler,
+      height: 40*scaler,
       backgroundColor: SELECTED_BG_COLOR,
       alignSelf: 'center',
       justifyContent: 'center'
@@ -176,7 +181,8 @@ export function makeStyles(params) {
     },
 
     weekRow: {
-      flexDirection: 'row'
+      flexDirection: 'row',
+     
     },
 
     disabledText: {
@@ -218,6 +224,7 @@ export function makeStyles(params) {
     monthContainer: {
       flex: 1,
       alignItems: 'center',
+
     },
 
     monthText: {
@@ -234,7 +241,7 @@ export function makeStyles(params) {
 
     monthsRow: {
       flexDirection: 'row',
-      padding: 20*scaler,
+      padding: 5*scaler,
     },
 
     yearHeaderMainText: {
@@ -269,7 +276,7 @@ export function makeStyles(params) {
 
     yearsRow: {
       flexDirection: 'row',
-      padding: 20*scaler,
+      padding: 10*scaler,
     },
 
   };
